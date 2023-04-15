@@ -1,8 +1,8 @@
 # CIPHERS_Finals
 
 # Title: HealthHub - Your One-Stop Healthcare App
-# Description: HealthHub is a comprehensive healthcare mobile application designed to provide easy access to healthcare services and products. 
-  # With HealthHub, users can order lab tests, medicines, and book appointments with specialist doctors from the comfort of their homes. 
+# Description: HealthHub is a comprehensive healthcare mobile application designed to provide easy access to healthcare products. 
+  # With HealthHub, users can order medicines from the comfort of their homes. 
   # The app also features a wealth of health-related articles to help users stay informed about various health conditions and treatments.
 
 # Functionalities:
@@ -19,4 +19,4 @@
 
 
 # Overall, HealthHub is a user-friendly and comprehensive healthcare app that offers convenience, transparency, and reliability to users. 
-  # The app provides easy access to healthcare services and products, making it an essential tool for anyone who wants to take control of their health and well-being.
+  # The app provides easy access to healthcare products, making it an essential tool for anyone who wants to take control of their health and well-being.
