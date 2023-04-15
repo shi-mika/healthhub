@@ -1,5 +1,7 @@
 # CIPHERS_Finals
 
+#Members: Emika Gellecania, Queennie Aro, Emmanuel Jose Ingua, MJ Tero
+
 # Title: HealthHub - Your One-Stop Healthcare App
 # Description: HealthHub is a comprehensive healthcare mobile application designed to provide easy access to healthcare products. 
   # With HealthHub, users can order medicines from the comfort of their homes. 
