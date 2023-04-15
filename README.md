@@ -13,7 +13,7 @@
 
    # Health Articles: The app provides a wealth of health-related articles, covering a wide range of topics, from lifestyle and diet to specific health conditions and treatments.
 
-   # Order Details: Users can view their order history, track the status of their orders, and receive real-time updates on the delivery of their lab test results or medicines.
+   # Order Details: Users can view their order history, track the status of their orders, and receive real-time updates on the delivery of their medicines.
    
    # Logout: Users can log out of the app to ensure the security of their personal and health-related information.
 
