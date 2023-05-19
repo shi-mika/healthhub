@@ -10,7 +10,7 @@ public class HealthArticlesViewModel extends ViewModel {
 
     public HealthArticlesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Health Articles");
+        mText.setValue("Today's Health Articles");
     }
 
     public LiveData<String> getText() {

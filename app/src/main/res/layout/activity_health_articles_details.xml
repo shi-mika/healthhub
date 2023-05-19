@@ -10,7 +10,7 @@
         android:id="@+id/textViewHADTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Smoking"
+        android:text="Lorem Ipsum"
         android:fontFamily="@font/sf_bold"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -24,12 +24,12 @@
         android:id="@+id/textView_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="29dp"
-        android:text="HealthHub"
-        android:fontFamily="@font/sf_bold"
-        android:textColor="@color/purple_200"
-        android:textSize="34sp"
+        android:text="Health is Wealth"
+        android:fontFamily="@font/sf_regular"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHADTitle"
-        tools:srcCompat="@drawable/health1" />
+        tools:srcCompat="@drawable/health2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

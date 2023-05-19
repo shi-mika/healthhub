@@ -22,19 +22,21 @@ import java.util.HashMap;
 public class HealthArticlesFragment extends Fragment {
 
     private final String[][] health_details = {
-            {"Walking Daily", "", "", "", "Click for More Details"},
-            {"Home Care", "", "", "", "Click for More Details"},
-            {"Stop smoking", "", "", "", "Click for More Details"},
-            {"Menstrual cramps", "", "", "", "Click for More Details"},
-            {"Healthy gut", "", "", "", "Click for More Details"}
+            {"Stop Smoking", "by Sandie Richards", "May 2023", "", "Click for More Details"},
+            {"Changing Pads", "by Richard Feynman", "July 2022", "", "Click for More Details"},
+            {"Eat Healthy", "by Peter Jason Quill", "May 2023", "", "Click for More Details"},
+            {"High Blood Pressure", "by Natasha Romano", "July 2021", "", "Click for More Details"},
+            {"Mental Health Awareness", "by Julius Caesar", "May 2020", "", "Click for More Details"},
+            {"AIDS Day", "by Rocket Racoon", "July 2019", "", "Click for More Details"},
     };
 
     private final int[] images = {
             R.drawable.health1,
             R.drawable.health2,
-            R.drawable.health1,
-            R.drawable.health2,
-            R.drawable.health1,
+            R.drawable.health3,
+            R.drawable.health4,
+            R.drawable.health5,
+            R.drawable.health6,
     };
 
     HashMap<String, String> item;
