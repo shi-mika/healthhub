@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">testbotnav</string>
+    <string name="app_name">HealthHub</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_health_articles">Health Articles</string>
 </resources>
