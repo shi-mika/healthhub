@@ -15,6 +15,15 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyMedicineActivity"
+            android:exported="false" />
+        <activity
             android:name=".CartBuyMedicineActivity"
             android:exported="false" />
         <activity
@@ -24,7 +33,7 @@
             android:name=".BuyMedicineBookActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".OrderDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".Database"
@@ -33,7 +42,7 @@
             android:name=".HealthArticlesDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".OrderDetailsActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

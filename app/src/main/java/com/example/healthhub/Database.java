@@ -39,7 +39,7 @@ public class Database extends SQLiteOpenHelper  {
         cv.put("email", email);
         cv.put("password", password);
         SQLiteDatabase db = getWritableDatabase();
-        db.insert("user", null, cv);
+        db.insert("users", null, cv);
         db.close();
 
     }
