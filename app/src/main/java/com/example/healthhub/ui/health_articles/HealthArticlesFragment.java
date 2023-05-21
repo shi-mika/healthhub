@@ -53,7 +53,7 @@ public class HealthArticlesFragment extends Fragment {
         TextView textView = root.findViewById(R.id.textViewHATitle);
         healthArticlesViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        lst = root.findViewById(R.id.listViewHA);
+        lst = root.findViewById(R.id.listViewBMCart);
 
         list = new ArrayList<>();
         for (String[] health_detail : health_details) {

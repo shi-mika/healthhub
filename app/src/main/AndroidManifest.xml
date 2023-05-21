@@ -21,7 +21,7 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".BuyMedicineBookActivity"
             android:exported="false" />
         <activity
             android:name=".CartBuyMedicineActivity"
@@ -30,7 +30,7 @@
             android:name=".BuyMedicineDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".BuyMedicineBookActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".OrderDetailsActivity"

@@ -40,7 +40,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
             }
         });
 
-        Database db = new Database(getApplicationContext(),"HealthHub", null, 1);
+        Database db = new Database(getApplicationContext(),"healthub", null, 1);
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username","");
         ArrayList dbData = db.getOrderData(username);

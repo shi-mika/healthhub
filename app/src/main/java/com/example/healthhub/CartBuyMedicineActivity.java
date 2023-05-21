@@ -46,7 +46,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
         SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedpreferences.getString("username", "").toString();
 
-        Database db = new Database(getApplicationContext(), "healthcare", null, 1);
+        Database db = new Database(getApplicationContext(), "healthub", null, 1);
 
         float totalAmount = 0;
         ArrayList dbData = db.getCartData(username, "medicine");
@@ -62,10 +62,10 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             String arrData = dbData.get(i).toString();
             String[] strData = arrData.split(java.util.regex.Pattern.quote("$"));
             packages[i][0] = strData[0];
-            packages[i][4] = "Cost: " + strData[1] + "/-";
+            packages[i][4] = "Cost: " + strData[1] + "$";
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
-        tvTotal.setText("Total Cost: " + totalAmount);
+        tvTotal.setText("Total Cost: " + totalAmount + "$");
 
         List = new ArrayList();
         for (int i = 0; i < packages.length; i++) {

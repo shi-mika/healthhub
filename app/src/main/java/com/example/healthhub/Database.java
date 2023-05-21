@@ -24,7 +24,7 @@ public class Database extends SQLiteOpenHelper  {
         String qry2 = "create table cart(username text,product text,price float, otype text)";
         sqliteDatabase.execSQL(qry2);
 
-        String qry3 = "create table orderplace(username text, fullname text,address text,contactno text,pincode)";
+        String qry3 = "create table orderplace(username text, fullname text,address text,contactno text,pincode integer,date text,time text,amount float,otype text)";
         sqliteDatabase.execSQL(qry3);
 
     }
@@ -106,21 +106,22 @@ public class Database extends SQLiteOpenHelper  {
         db.close();
         return arr;
     }
-    public void addOrder(String username, String fullname, String address, String contact, int pincode, String date, String time, float amount, String otype){
+    public void addOrder(String username, String fullname, String address, String contact, int pincode, String date, String time, float amount, String otype) {
         ContentValues cv = new ContentValues();
-        cv.put("username",username);
-        cv.put("fullname",fullname);
-        cv.put("address",address);
-        cv.put("contactno",contact);
-        cv.put("pincode",pincode);
-        cv.put("date",date);
-        cv.put("time",time);
-        cv.put("amount",amount);
-        cv.put("otype",otype);
+        cv.put("username", username);
+        cv.put("fullname", fullname);
+        cv.put("address", address);
+        cv.put("contactno", contact);
+        cv.put("pincode", pincode);
+        cv.put("date", date);
+        cv.put("time", time);
+        cv.put("amount", amount);
+        cv.put("otype", otype);
         SQLiteDatabase db = getWritableDatabase();
-        db.insert("orderplace",null,cv);
+        db.insert("orderplace", null, cv);
         db.close();
     }
+
     public ArrayList getOrderData(String username)
     {
         ArrayList<String> arr=new ArrayList<>();

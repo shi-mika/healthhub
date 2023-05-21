@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listViewHA"
+        android:id="@+id/listViewBMCart"
         android:layout_width="310dp"
         android:layout_height="472dp"
         android:layout_marginStart="40dp"
