@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         });
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });

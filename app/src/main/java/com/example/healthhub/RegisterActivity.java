@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
             }
         });
@@ -48,14 +48,14 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please fill all Details", Toast.LENGTH_SHORT).show();
                 }else{
                     if (password.compareTo(confirm)==0){
-                        if(isValid(password)){
+                        //if(isValid(password)){
                             db.register(username,email,password);
                             Toast.makeText(getApplicationContext(), "Record inserted!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
 
-                        }else {
-                            Toast.makeText(getApplicationContext(), "Password must contain 8 characters", Toast.LENGTH_SHORT).show();
-                        }
+                        //}else {
+                           // Toast.makeText(getApplicationContext(), "Password must contain 8 characters", Toast.LENGTH_SHORT).show();
+                       // }
 
                     }else{
                         Toast.makeText(getApplicationContext(), "Password and confirm password didn't match", Toast.LENGTH_SHORT).show();

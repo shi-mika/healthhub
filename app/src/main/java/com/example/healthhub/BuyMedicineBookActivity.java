@@ -22,7 +22,7 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
 
         edname = findViewById(R.id.editTextBMBFullname);
         edaddress = findViewById(R.id.editTextBMBAddress);
-        edcontact = findViewById(R.id.editTextBMBAddress);
+        edcontact = findViewById(R.id.editTextBMBContactNumber);
         edpincode = findViewById(R.id.editTextBMBPincode);
         btnBooking = findViewById(R.id.buttonBMBBooking);
 
