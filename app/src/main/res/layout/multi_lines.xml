@@ -7,12 +7,12 @@
     android:padding="15dp">
 
     <TextView
+        android:id="@+id/line_a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/line_a"
-        android:text="TextView"
         android:fontFamily="@font/sf_bold"
-        android:textColor="@color/white"
+        android:text="TextView"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="italic" />
 
