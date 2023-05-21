@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back9"
     tools:context=".BuyMedicineDetailsActivity">
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="24*7 Health Care"
+        android:text="Healthub"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewBMTitle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:text="Buy Medicine"
-        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,20 +40,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBMDTotalCost"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.529" />
 
     <Button
         android:id="@+id/buttonBMDGoToCart"
-        android:layout_width="194dp"
-        android:layout_height="48dp"
+        android:layout_width="143dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
-        android:text="Go to Cart"
+        android:text="Add To Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonBMDBack"
-        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBMDTotalCost"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <EditText
         android:id="@+id/editTextTextBMDMultiLine"
@@ -63,7 +63,6 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +72,7 @@
         android:id="@+id/textViewBMDTotalCost"
         android:layout_width="132dp"
         android:layout_height="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

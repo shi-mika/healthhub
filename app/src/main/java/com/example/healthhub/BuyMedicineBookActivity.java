@@ -37,7 +37,7 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
                 SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                 String username = sharedpreferences.getString("username","").toString();
 
-                Database db = new Database (getApplicationContext(),"healthub",null,1);
+                Database db = new Database(getApplicationContext(),"healthub",null,1);
                 db.addOrder(
                         username,
                         edname.getText().toString(),
