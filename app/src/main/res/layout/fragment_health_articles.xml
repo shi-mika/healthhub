@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back11"
     tools:context=".ui.health_articles.HealthArticlesFragment">
 
     <TextView
@@ -35,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listViewBMCart"
+        android:id="@+id/listViewHA"
         android:layout_width="310dp"
         android:layout_height="472dp"
         android:layout_marginStart="40dp"
