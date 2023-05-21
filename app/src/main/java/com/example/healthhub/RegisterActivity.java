@@ -39,16 +39,16 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String username = edUsername.getText().toString();
-                String password = edUsername.getText().toString();
-                String email = edUsername.getText().toString();
-                String confirm = edUsername.getText().toString();
+                String password = edPassword.getText().toString();
+                String email = edEmail.getText().toString();
+                String confirm = edConfirm.getText().toString();
                 Database db = new Database(getApplicationContext(),"healthub",null,1);
 
                 if(username.length()==0 || email.length()==0 || password.length()==0 || confirm.length()==0){
                     Toast.makeText(getApplicationContext(), "Please fill all Details", Toast.LENGTH_SHORT).show();
                 }else{
                     if (password.compareTo(confirm)==0){
-                        //if(isValid(password)){
+
                             db.register(username,email,password);
                             Toast.makeText(getApplicationContext(), "Record inserted!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Password and confirm password didn't match", Toast.LENGTH_SHORT).show();
                     }
                 }
-            }
+           }
         });
 
     }
