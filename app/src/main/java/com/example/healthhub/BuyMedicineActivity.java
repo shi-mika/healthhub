@@ -14,8 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BuyMedicineActivity extends AppCompatActivity {
-    private String[][] packages =
-            {
+    private String[][] packages = {
                     {"Uprise-D3 1000IU Capsule", "", "", "", "50"},
                     {"HealthVit Chromium Picolinate 200mcg Capsule", "", "", "", "305"},
                     {"Vitamin B Complex Capsules", "", "", "", "448"},
@@ -25,7 +24,7 @@ public class BuyMedicineActivity extends AppCompatActivity {
                     {"Strepsils Medicated Lozenges for Sore Throat", "", "", "", "40"},
                     {"Tata 1mg Calcium + Vitamin D3", "", "", "", "30"},
                     {"Feronia -XT Tablet", "", "", "", "130"},
-            };
+    };
     private String[] package_details = {
 
             "Building and keeping the bones & teeth strong\n" +
@@ -90,20 +89,21 @@ public class BuyMedicineActivity extends AppCompatActivity {
 
         sa = new SimpleAdapter(this, list,
                 R.layout.multi_lines,
-                new String[] { "Line1", "Line2", "line3", "line4", "line5" },
-                new int[] {R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e});
+                new String[]{"line1", "line2", "line3", "line4", "line5"},
+                new int[]{R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e});
+
         lst.setAdapter(sa);
 
-        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent it = new Intent(BuyMedicineActivity.this,BuyMedicineDetailsActivity.class);
-                it.putExtra("text1", packages[i][0]);
-                it.putExtra("text2", package_details[i]);
-                it.putExtra("text3", packages[i][4]);
-                startActivity(it);
-            }
+        lst.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent it = new Intent(BuyMedicineActivity.this, BuyMedicineDetailsActivity.class);
+            it.putExtra("text1", packages[i][0]);
+            it.putExtra("text2", package_details[i]);
+            it.putExtra("text3",packages[i][4]);
+            startActivity(it);
         });
+
+
+
 
     }
 }
