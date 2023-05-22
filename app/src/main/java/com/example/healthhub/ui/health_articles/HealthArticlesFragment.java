@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -45,6 +46,8 @@ public class HealthArticlesFragment extends Fragment {
 
     ListView lst;
 
+    Button button;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_health_articles, container, false);
 
@@ -54,6 +57,7 @@ public class HealthArticlesFragment extends Fragment {
         healthArticlesViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         lst = root.findViewById(R.id.listViewHA);
+
 
         list = new ArrayList<>();
         for (String[] health_detail : health_details) {

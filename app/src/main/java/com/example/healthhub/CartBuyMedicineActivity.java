@@ -44,12 +44,12 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
         lst = findViewById(R.id.listViewBMCart);
 
         SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
-        String username = sharedpreferences.getString("username", "").toString();
+        String username = sharedpreferences.getString("username","").toString();
 
-        Database db = new Database(getApplicationContext(), "healthub", null, 1);
+        Database db = new Database(getApplicationContext(), "health", null, 1);
 
         float totalAmount = 0;
-        ArrayList dbData = db.getCartData(username, "medicine");
+        ArrayList dbData = db.getCartData(username);
         //Toast.makeText(getApplicationContext(), ""+dbData, Toast.LENGTH_LONG).show();
 
         packages = new String[dbData.size()][];
@@ -65,7 +65,9 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             packages[i][4] = "Cost: " + strData[1] + "$";
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
+
         tvTotal.setText("Total Cost: " + totalAmount + "$");
+
 
         List = new ArrayList();
         for (int i = 0; i < packages.length; i++) {
@@ -90,18 +92,17 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             }
         });
 
+        float finalTotalAmount = totalAmount;
         btnCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(CartBuyMedicineActivity.this, BuyMedicineBookActivity.class);
-                it.putExtra("price", tvTotal.getText());
-                it.putExtra("date", dateButton.getText());
-
+                it.putExtra("price", String.valueOf(finalTotalAmount));
+                it.putExtra("date", dateButton.getText().toString());
                 startActivity(it);
-
             }
-
         });
+
 
         //datepicker
         initDatePicker();

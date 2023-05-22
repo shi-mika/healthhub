@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-                Database db = new Database(getApplicationContext(),"healthub",null,1);
+                Database db = new Database(getApplicationContext(),"health",null,1);
                 if(username.length()==0 || password.length()==0){
                     Toast.makeText(getApplicationContext(), "Please fill all Details", Toast.LENGTH_SHORT).show();
                 }else{
@@ -46,13 +46,14 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString("username", username);
                         //to save our data with key and value
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this,BuyMedicineActivity.class));
                     }else{
                         Toast.makeText(getApplicationContext(), "Invalid username and password", Toast.LENGTH_SHORT).show();
                     }}
 
             }
         });
+
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
