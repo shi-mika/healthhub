@@ -16,6 +16,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.example.healthhub.ui.medicines.MedicinesFragment;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -88,7 +90,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CartBuyMedicineActivity.this, BuyMedicineActivity.class));
+                startActivity(new Intent(CartBuyMedicineActivity.this, MedicinesFragment.class));
             }
         });
 

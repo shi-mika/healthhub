@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.healthhub.ui.medicines.MedicinesFragment;
+
 public class BuyMedicineDetailsActivity extends AppCompatActivity {
 
     TextView tvPackageName, tvTotalCost;
@@ -37,7 +39,7 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BuyMedicineDetailsActivity.this, BuyMedicineActivity.class));
+                startActivity(new Intent(BuyMedicineDetailsActivity.this, MedicinesFragment.class));
 
             }
         });
