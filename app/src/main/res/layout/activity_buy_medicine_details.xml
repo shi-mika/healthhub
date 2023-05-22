@@ -12,11 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Healthub"
+        android:fontFamily="@font/sf_medium"
+        android:text="Buy Medicine"
+        android:textColor="@color/black"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewBMTitle"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBMDPackageName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,12 +25,12 @@
         android:id="@+id/textViewBMDPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="10dp"
         android:text="Buy Medicine"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/buttonBMDBack"
@@ -60,11 +61,9 @@
         android:layout_width="300dp"
         android:layout_height="347dp"
         android:layout_marginTop="32dp"
-        android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBMDPackageName" />
 
@@ -72,7 +71,7 @@
         android:id="@+id/textViewBMDTotalCost"
         android:layout_width="132dp"
         android:layout_height="36dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="36dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -1,5 +1,6 @@
 package com.example.healthhub;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,11 +49,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if (itemId == R.id.refresh) {
-            // Handle refresh action here
+        if (itemId == R.id.cart) {
+            // Start the CartActivity
+            Intent intent = new Intent(this, CartBuyMedicineActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (itemId == R.id.refresh) {
+            recreate();
             return true;
         } else if (itemId == R.id.sign_out) {
-            // Handle sign out action here
+            // Redirect the user to the login activity
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish(); // Finish the current activity to prevent going back to it on back press
             return true;
         }
         return super.onOptionsItemSelected(item);

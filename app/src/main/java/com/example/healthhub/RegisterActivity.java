@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.bumptech.glide.Glide;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -27,6 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
         edConfirm = findViewById(R.id.editTextRegconPassword);
         btn = findViewById(R.id.buttonReg);
         tv = findViewById(R.id.textViewExistUser);
+        ImageView imageView = findViewById(R.id.imageView_gif);
+        Glide.with(this).asGif().load(R.drawable.gif_logo2).into(imageView);
 
         tv.setOnClickListener(new View.OnClickListener() {
             @Override

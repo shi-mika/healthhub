@@ -116,5 +116,7 @@ public class MedicinesFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         lst.setOnItemClickListener(null);
+        btnBack.setOnClickListener(null);
+        btnGoToCart.setOnClickListener(null);
     }
 }

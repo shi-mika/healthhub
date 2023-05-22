@@ -1,10 +1,7 @@
 package com.example.healthhub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +12,8 @@ import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.healthhub.ui.medicines.MedicinesFragment;
 
@@ -30,9 +29,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
     TextView tvTotal;
     ListView lst;
     private DatePickerDialog datePickerDialog;
-    private TimePickerDialog timePickerDialog;
-    private Button dateButton, btnCheckout, btnBack;
-    private String[][] packages = {};
+    private Button dateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +37,13 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cart_buy_medicine);
 
         dateButton = findViewById(R.id.buttonBMCartDate);
-        btnCheckout = findViewById(R.id.buttonBMCartCheckout);
-        btnBack = findViewById(R.id.buttonBMCartBack);
+        Button btnCheckout = findViewById(R.id.buttonBMCartCheckout);
+        Button btnBack = findViewById(R.id.buttonBMCartBack);
         tvTotal = findViewById(R.id.textViewBMCartTotalCost);
         lst = findViewById(R.id.listViewBMCart);
 
         SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
-        String username = sharedpreferences.getString("username","").toString();
+        String username = sharedpreferences.getString("username","");
 
         Database db = new Database(getApplicationContext(), "health", null, 1);
 
@@ -54,7 +51,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
         ArrayList dbData = db.getCartData(username);
         //Toast.makeText(getApplicationContext(), ""+dbData, Toast.LENGTH_LONG).show();
 
-        packages = new String[dbData.size()][];
+        String[][] packages = new String[dbData.size()][];
         for (int i = 0; i < packages.length; i++) {
             packages[i] = new String[5];
 
@@ -72,13 +69,13 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
 
 
         List = new ArrayList();
-        for (int i = 0; i < packages.length; i++) {
-            item = new HashMap<String, String>();
-            item.put("line1", packages[i][0]);
-            item.put("line2", packages[i][1]);
-            item.put("line3", packages[i][2]);
-            item.put("line4", packages[i][3]);
-            item.put("line5", packages[i][4]);
+        for (String[] aPackage : packages) {
+            item = new HashMap<>();
+            item.put("line1", aPackage[0]);
+            item.put("line2", aPackage[1]);
+            item.put("line3", aPackage[2]);
+            item.put("line4", aPackage[3]);
+            item.put("line5", aPackage[4]);
             List.add(item);
         }
         sa = new SimpleAdapter(this, List,
@@ -87,43 +84,26 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
                 new int[]{R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e});
         lst.setAdapter(sa);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(CartBuyMedicineActivity.this, MedicinesFragment.class));
-            }
-        });
+        btnBack.setOnClickListener(view -> startActivity(new Intent(CartBuyMedicineActivity.this, MedicinesFragment.class)));
 
         float finalTotalAmount = totalAmount;
-        btnCheckout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(CartBuyMedicineActivity.this, BuyMedicineBookActivity.class);
-                it.putExtra("price", String.valueOf(finalTotalAmount));
-                it.putExtra("date", dateButton.getText().toString());
-                startActivity(it);
-            }
+        btnCheckout.setOnClickListener(view -> {
+            Intent it = new Intent(CartBuyMedicineActivity.this, BuyMedicineBookActivity.class);
+            it.putExtra("price", String.valueOf(finalTotalAmount));
+            it.putExtra("date", dateButton.getText().toString());
+            startActivity(it);
         });
 
 
         //datepicker
         initDatePicker();
-        dateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                datePickerDialog.show();
-            }
-
-        });
+        dateButton.setOnClickListener(view -> datePickerDialog.show());
     }
 
     private void initDatePicker() {
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                i1 = i1 + 1;
-                dateButton.setText(i2 + "/" + i1 + "/" + i);
-            }
+        DatePickerDialog.OnDateSetListener dateSetListener = (datePicker, i, i1, i2) -> {
+            i1 = i1 + 1;
+            dateButton.setText(i2 + "/" + i1 + "/" + i);
         };
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);

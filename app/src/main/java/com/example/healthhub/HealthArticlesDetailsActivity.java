@@ -35,8 +35,6 @@ public class HealthArticlesDetailsActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(view -> {
             finish();
-            //NavController navController = Navigation.findNavController(HealthArticlesDetailsActivity.this, R.id.nav_host_fragment_activity_main); navController.navigate(R.id.navigation_health_articles);
-
         });
     }
 }
