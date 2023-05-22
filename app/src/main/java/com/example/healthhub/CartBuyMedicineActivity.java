@@ -65,7 +65,9 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             packages[i][4] = "Cost: " + strData[1] + "$";
             totalAmount = totalAmount + Float.parseFloat(strData[1]);
         }
+
         tvTotal.setText("Total Cost: " + totalAmount + "$");
+
 
         List = new ArrayList();
         for (int i = 0; i < packages.length; i++) {
@@ -90,18 +92,17 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
             }
         });
 
+        float finalTotalAmount = totalAmount;
         btnCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(CartBuyMedicineActivity.this, BuyMedicineBookActivity.class);
-                it.putExtra("price", tvTotal.getText());
-                it.putExtra("date", dateButton.getText());
-
+                it.putExtra("price", String.valueOf(finalTotalAmount));
+                it.putExtra("date", dateButton.getText().toString());
                 startActivity(it);
-
             }
-
         });
+
 
         //datepicker
         initDatePicker();
