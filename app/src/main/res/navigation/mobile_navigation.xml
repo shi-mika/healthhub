@@ -9,13 +9,27 @@
         android:id="@+id/navigation_medicines"
         android:name="com.example.healthhub.ui.medicines.MedicinesFragment"
         android:label="@string/title_medicines"
-        tools:layout="@layout/fragment_medicines" />
+        tools:layout="@layout/fragment_medicines" >
+        <action
+            android:id="@+id/action_navigation_medicines_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_medicines_to_navigation_health_articles"
+            app:destination="@id/navigation_health_articles" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.healthhub.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_medicines"
+            app:destination="@id/navigation_medicines" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_health_articles"
+            app:destination="@id/navigation_health_articles" />
+    </fragment>
 
     <!--<fragment
         android:id="@+id/navigation_notifications"
@@ -27,6 +41,13 @@
         android:id="@+id/navigation_health_articles"
         android:name="com.example.healthhub.ui.health_articles.HealthArticlesFragment"
         android:label="@string/title_health_articles"
-        tools:layout="@layout/fragment_health_articles" />
+        tools:layout="@layout/fragment_health_articles" >
+        <action
+            android:id="@+id/action_navigation_health_articles_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_health_articles_to_navigation_medicines"
+            app:destination="@id/navigation_medicines" />
+    </fragment>
 
 </navigation>

@@ -21,4 +21,18 @@
     <string name="add_cart">Cart</string>
     <string name="refresh">Refresh</string>
     <string name="sign_out">Sign out</string>
+    <string name="your_1_healthcare_app">Your #1 Healthcare App</string>
+    <string name="logo">logo</string>
+    <string name="medicines">Medicines</string>
+    <string name="pill">pill</string>
+    <string name="my_cart">My Cart</string>
+    <string name="my_carts">my_cart</string>
+    <string name="order_details">Order Details</string>
+    <string name="order_detailss">order details</string>
+    <string name="health_articles">Health Articles</string>
+    <string name="health_article">health article</string>
+    <string name="medicine_details">Medicine Details</string>
+    <string name="medicine_detailss">medicine details</string>
+    <string name="out">Sign Out</string>
+    <string name="sign_outs">sign out</string>
 </resources>

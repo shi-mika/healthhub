@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.healthhub.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import com.example.healthhub.databinding.ActivityMainBinding;
+import com.example.healthhub.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,14 +27,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+// Passing each menu ID as a set of Ids because each
+// menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_medicines, R.id.navigation_dashboard, R.id.navigation_health_articles)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+
+        navView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.navigation_medicines) {
+                // Navigate to MedicinesFragment
+                navController.navigate(R.id.navigation_medicines);
+                return true;
+            } else if (item.getItemId() == R.id.navigation_dashboard) {
+                // Navigate to DashboardFragment
+                navController.navigate(R.id.navigation_dashboard);
+                return true;
+            } else if (item.getItemId() == R.id.navigation_health_articles) {
+                // Navigate to HealthArticlesFragment
+                navController.navigate(R.id.navigation_health_articles);
+                return true;
+            }
+            return false;
+        });
+
+
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(navView, navController);
     }
 
     @Override

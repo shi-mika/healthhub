@@ -48,29 +48,4 @@
         app:layout_constraintStart_toStartOf="@+id/textViewBMTitle"
         app:layout_constraintTop_toBottomOf="@+id/textViewBMTitle" />
 
-    <Button
-        android:id="@+id/buttonBMBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/back"
-        android:background="@drawable/btn_bg"
-        android:fontFamily="@font/sf_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <Button
-        android:id="@+id/buttonBMGoToCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/btn_bg"
-        android:text="@string/cart"
-        android:fontFamily="@font/sf_bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonBMBack"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

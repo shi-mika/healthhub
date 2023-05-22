@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -63,7 +62,6 @@ public class MedicinesFragment extends Fragment {
     HashMap<String, String> item;
     ArrayList<HashMap<String, String>> list;
     SimpleAdapter sa;
-    Button btnBack,btnGoToCart;
     ListView lst;
 
     @Override
@@ -76,8 +74,6 @@ public class MedicinesFragment extends Fragment {
         medicinesViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         lst = root.findViewById(R.id.listViewBMCart);
-        btnBack = root.findViewById(R.id.buttonBMBack);
-        btnGoToCart = root.findViewById(R.id.buttonBMGoToCart);
 
         list = new ArrayList<>();
         for (String[] aPackage : packages) {
@@ -105,10 +101,6 @@ public class MedicinesFragment extends Fragment {
             startActivity(it);
         });
 
-        btnGoToCart.setOnClickListener(view -> startActivity(new Intent(getActivity(), CartBuyMedicineActivity.class)));
-
-        btnBack.setOnClickListener(view -> startActivity(new Intent(getActivity(), MainActivity.class)));
-
         return root;
     }
 
@@ -116,7 +108,5 @@ public class MedicinesFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         lst.setOnItemClickListener(null);
-        btnBack.setOnClickListener(null);
-        btnGoToCart.setOnClickListener(null);
     }
 }
