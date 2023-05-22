@@ -72,7 +72,7 @@ public class BuyMedicineActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BuyMedicineActivity.this, MainActivity.class));
+                startActivity(new Intent(BuyMedicineActivity.this, OrderDetailsActivity.class));
             }
         });
 
