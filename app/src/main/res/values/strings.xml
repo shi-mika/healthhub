@@ -4,4 +4,17 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_health_articles">Health Articles</string>
+    <string name="title_medicines">Medicines</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="reg">Register for new user</string>
+    <string name="gif">gif</string>
+    <string name="cart">Go to Cart</string>
+    <string name="back">Back</string>
+    <string name="tagline">Health is Wealth</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="account">Already have an account?</string>
 </resources>

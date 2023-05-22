@@ -22,7 +22,7 @@
     <EditText
         android:id="@+id/editTextBMBPincode"
         android:layout_width="310dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Pin Code"
@@ -35,7 +35,7 @@
     <EditText
         android:id="@+id/editTextBMBFullname"
         android:layout_width="310dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Full Name"
@@ -48,7 +48,7 @@
     <EditText
         android:id="@+id/editTextBMBAddress"
         android:layout_width="310dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Address"
@@ -61,7 +61,7 @@
     <EditText
         android:id="@+id/editTextBMBContactNumber"
         android:layout_width="310dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Contact Number"
@@ -89,7 +89,7 @@
         android:layout_marginTop="28dp"
         android:text="Health Hub"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewBMTitle"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBMPackage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

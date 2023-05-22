@@ -30,9 +30,6 @@
             android:name=".BuyMedicineDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".OrderDetailsActivity"
             android:exported="false" />
         <activity
@@ -42,7 +39,7 @@
             android:name=".HealthArticlesDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".BuyMedicineActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
