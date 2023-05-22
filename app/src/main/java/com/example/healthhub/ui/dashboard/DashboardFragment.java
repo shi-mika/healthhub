@@ -57,8 +57,14 @@ CardView cart, med, pill, out, health, order;
             }
         });
 
+        health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_navigation_dashboard_to_navigation_health_articles);
+            }
+        });
 
-        health.setOnClickListener(view -> startActivity(new Intent(getActivity(), HealthArticlesDetailsActivity.class)));
         order.setOnClickListener(view -> startActivity(new Intent(getActivity(), OrderDetailsActivity.class)));
 
         out.setOnClickListener(view -> {

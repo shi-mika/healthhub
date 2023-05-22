@@ -84,7 +84,7 @@ public class CartBuyMedicineActivity extends AppCompatActivity {
                 new int[]{R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e});
         lst.setAdapter(sa);
 
-        btnBack.setOnClickListener(view -> startActivity(new Intent(CartBuyMedicineActivity.this, MedicinesFragment.class)));
+        btnBack.setOnClickListener(view -> finish());
 
         float finalTotalAmount = totalAmount;
         btnCheckout.setOnClickListener(view -> {
