@@ -49,12 +49,12 @@ public class BuyMedicineDetailsActivity extends AppCompatActivity {
                 String product = tvPackageName.getText().toString();
                 float price = Float.parseFloat(intent.getStringExtra("text3").toString());
 
-                Database db = new Database (getApplicationContext(),"healthub", null, 1);
+                Database db = new Database (getApplicationContext(),"health", null, 1);
 
                 if (db.checkCart (username, product)==1){
                     Toast.makeText(getApplicationContext(), "Product Already Added", Toast.LENGTH_SHORT).show();
                 }else{
-                    db.addCart (username, product, price, "medicine");
+                    db.addCart (username, product, price);
                     Toast.makeText(getApplicationContext(),"Record Inserted to Cart", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(BuyMedicineDetailsActivity.this, BuyMedicineActivity.class));
 
