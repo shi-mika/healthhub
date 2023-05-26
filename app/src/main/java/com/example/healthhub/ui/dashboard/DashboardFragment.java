@@ -10,21 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import com.example.healthhub.BuyMedicineActivity;
 import com.example.healthhub.BuyMedicineDetailsActivity;
 import com.example.healthhub.CartBuyMedicineActivity;
-import com.example.healthhub.HealthArticlesDetailsActivity;
 import com.example.healthhub.LoginActivity;
 import com.example.healthhub.OrderDetailsActivity;
 import com.example.healthhub.R;
 import com.bumptech.glide.Glide;
-import com.example.healthhub.ui.medicines.MedicinesFragment;
 
 public class DashboardFragment extends Fragment {
 

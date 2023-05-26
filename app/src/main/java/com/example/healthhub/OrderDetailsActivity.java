@@ -45,13 +45,12 @@ public class OrderDetailsActivity extends AppCompatActivity {
         String username = sharedPreferences.getString("username","");
         ArrayList dbData = db.getOrderData(username);
 
-        order_details = new String[dbData.size()][];
-        for (int i = 0; i < order_details.length; i++){
-            order_details[i] = new String[5];
+        order_details = new String[dbData.size()][5];
+        for (int i = 0; i < dbData.size(); i++) {
             String arrData = dbData.get(i).toString();
             String[] strData = arrData.split(Pattern.quote("$"));
             order_details[i][0] = strData[0];
-            order_details[i][1] = strData[1];//+" "+strData[3];
+            order_details[i][1] = strData[1];
             if (strData[7].compareTo("medicine") == 0) {
                 order_details[i][3] = "Del:" + strData[4];
             } else {
@@ -60,6 +59,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
             order_details[i][2] = "Rs." + strData[6];
             order_details[i][4] = strData[7];
         }
+
 
         list = new ArrayList();
         for(int i=0;i<order_details.length;i++){
